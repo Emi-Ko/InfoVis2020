@@ -1,22 +1,28 @@
-// Constructor
-Vec3 = function( x, y, z )
+class Vec3
 {
-  this.x = x;
-  this.y = y;
-  this.z = z;
-}
+  // Constructor
+  constructor( x, y, z )
+  {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
 
-//Add method
-Vec3.prototype.add = function( v )
-{
-  this.x += v.x;
-  this.y += v.y;
-  this.z += v.z;
-  return this;
-}
+  // Methods
 
-// Sum method
-Vec3.prototype.sum = function()
-{
-  return this.x + this.y + this.z;
+  // Add method
+  add( v )
+  {
+    this.x += v.x;
+    this.y += v.y;
+    this.z += v.z;
+    return this;
+  }
+
+  // Sum method
+  sum ()
+  {
+    return this.x + this.y + this.z;
+  }
+
 }
